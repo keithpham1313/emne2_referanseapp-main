@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakter · Emne 2</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <span class="brand">Kontaktboka <small>Emne 2</small></span>
+        <nav>
+          <button class="nav-button" onclick="goToContactsPage()">Kontakter</button>
+          <button class="nav-button" onclick="goToGroupsPage()">Grupper</button>
+        </nav>
+      </div>
+    </header>
+    <main id="app"></main>
+    <footer>Referanseapp for Emne 2 · Data lagres kun i minnet og nullstilles ved omlasting.</footer>
+    <script src="js/model.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/contactsPageController.js"></script>
+    <script src="js/editContactPageController.js"></script>
+    <script src="js/groupsPageController.js"></script>
+    <script src="js/contactsPageView.js"></script>
+    <script src="js/editContactPageView.js"></script>
+    <script src="js/groupsPageView.js"></script>
+    <script>
+      // BRUKERHANDLING → CONTROLLER → MODELLENDRING → updateView() → NY HTML
+      function updateView() {
+        if (model.app.currentPage === 'contactsPage') {
+          updateViewContactsPage();
+        }
+        else if (model.app.currentPage === 'editContactPage') {
+          updateViewEditContactPage();
+        }
+        else if (model.app.currentPage === 'groupsPage') {
+          updateViewGroupsPage();
+        }
+      }
+
+      updateView();
+    </script>
+  </body>
+</html>

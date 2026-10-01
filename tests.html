@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="nb">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUnit – Kontaktboka</title>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.24.1.css">
+</head>
+<body>
+    <p><a href="index.html">Åpne kontaktappen</a>. Testene henter QUnit fra nettet.</p>
+    <div id="qunit"></div>
+    <script src="https://code.jquery.com/qunit/qunit-2.24.1.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/contactsPageController.js"></script>
+    <script src="js/editContactPageController.js"></script>
+    <script src="js/groupsPageController.js"></script>
+    <!-- Ingen app-HTML eller view-filer: testene bruker en enkel updateView-stub. -->
+    <script src="tests/controllerTests.js"></script>
+</body>
+</html>
