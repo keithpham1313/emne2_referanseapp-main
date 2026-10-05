@@ -38,6 +38,7 @@ function toggleGroupForEditedContact(groupId) {
     const viewState = model.viewState.editContactPage;
     const selectedIds = viewState.selectedGroupIds;
     const newSelectedIds = [];
+    
     for (let id of selectedIds) {
         if (id !== groupId) {
             newSelectedIds.push(id);

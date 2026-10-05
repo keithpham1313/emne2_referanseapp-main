@@ -8,15 +8,19 @@ function updateViewEditContactPage() {
         <h1>${heading}</h1>
         <p class="muted">Lagre beholder endringene. Avbryt forkaster utkastet.</p>
         <form onsubmit="saveContact(); return false;">
+
             <label for="name">Navn (obligatorisk)</label>
             <input id="name" required value="${escapeHtml(viewState.name)}"
                 oninput="model.viewState.editContactPage.name = this.value">
+
             <label for="phone">Telefon</label>
             <input id="phone" type="tel" value="${escapeHtml(viewState.phone)}"
                 oninput="model.viewState.editContactPage.phone = this.value">
+
             <label for="email">E-post</label>
             <input id="email" type="email" value="${escapeHtml(viewState.email)}"
                 oninput="model.viewState.editContactPage.email = this.value">
+                
             <fieldset><legend>Grupper</legend>
                 ${createGroupCheckboxesHtml()}
             </fieldset>
